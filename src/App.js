@@ -1,25 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './Components/Home/Home';
+import { useEffect, useState } from 'react';
+import Navbar from './Components/Navbar/Navbar';
+import About from './Components/About/About';
+import Intro from './Components/Intro/Intro';
+import Tech from './Components/Tech/Tech';
 
-function App() {
+export default function App() {
+  const [showNavbar, setShowNavbar] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = window.innerHeight * 0.7; // Change as needed
+      setShowNavbar(window.scrollY > scrollThreshold);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  useEffect(() => {
+    // Check if the current URL is /meet and redirect to Google Meet
+    if (window.location.pathname === '/meet') {
+      window.location.href = 'https://meet.google.com/aoy-hopc-qib'; // Redirect to Google Meet
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-background'>
+      <Home/>
+      {showNavbar && <Navbar />}
+      <About />
+      <Tech/>
     </div>
-  );
+  )
 }
-
-export default App;
