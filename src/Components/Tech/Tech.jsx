@@ -1,4 +1,3 @@
-import React from 'react';
 
 const techStacks = [
     { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },

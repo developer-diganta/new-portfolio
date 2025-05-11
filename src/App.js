@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Home from './Components/Home/Home';
 import { useEffect, useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import About from './Components/About/About';
-import Intro from './Components/Intro/Intro';
+// import Intro from './Components/Intro/Intro';
 import Tech from './Components/Tech/Tech';
 
 export default function App() {
