@@ -7,6 +7,7 @@ import About from './Components/About/About';
 // import Intro from './Components/Intro/Intro';
 import Tech from './Components/Tech/Tech';
 import Experience from './Components/Experience/Experience';
+import Projects from './Components/Projects/Projects';
 
 export default function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -31,7 +32,8 @@ export default function App() {
       {showNavbar && <Navbar />}
       <About />
       <Tech />
-      <Experience/>
+      <Experience />
+      <Projects/>
     </div>
   )
 }

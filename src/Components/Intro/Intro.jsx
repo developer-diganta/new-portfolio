@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Intro() {
   return (
-    <div className='flex flex-col h-[100vh] w-full justify-center items-center text-primary gap-3'>
+    <div className='flex flex-col h-[100vh] w-full justify-center items-center text-primary gap-3 text-center'>
       <motion.div
         className='text-7xl font-sans'
         initial={{ y: -100, opacity: 0 }}  // Starts from above and invisible

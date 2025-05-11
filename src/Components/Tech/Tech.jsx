@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 
 const techStacks = [
     { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
@@ -39,25 +40,22 @@ export default function TechStack() {
             <div className="flex justify-center mb-12">
                 <div className="h-1 w-24 bg-accent rounded-full shadow-md" />
             </div>
-            <div className="grid grid-cols-4 gap-6 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6">
-                {techStacks.map((tech) => (
-                    <div key={tech.name} className="relative w-24 h-24 group">
-                        {/* Glow layer (slightly larger and blurred) */}
-                        {/* <div
-                            className="absolute inset-0 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-125"
-                            style={{
-                                background: '#4ADE80', // Your accent color
-                                clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-                                zIndex: 0,
-                                boxShadow: '0 0 15px rgba(74, 222, 128, 0.7)', // Glow effect
-                            }}
-                        /> */}
 
-                        {/* Main hexagon layer */}
+            <div className="grid grid-cols-4 gap-6 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6">
+                {techStacks.map((tech, index) => (
+                    <motion.div
+                        key={tech.name}
+                        className="relative w-24 h-24 group"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.03 }}
+                    >
                         <div
                             className="absolute inset-0 bg-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105"
                             style={{
-                                clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                                clipPath:
+                                    'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
                                 zIndex: 10,
                             }}
                         >
@@ -67,9 +65,10 @@ export default function TechStack() {
                                 className="w-12 h-12 object-contain"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>
     );
 }
+  
