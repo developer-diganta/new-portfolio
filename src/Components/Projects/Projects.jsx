@@ -16,11 +16,11 @@ const projects = [
         githubLink: "https://github.com/your-username/autotrack-clihttps://github.com/developer-diganta/Amazon-India-Clone"
     },
     {
-        name: "Keploy Docs Revamp",
-        description: "Led a complete redesign of Keploy’s documentation platform, improving user flow and accessibility.",
-        image: "assets/keploy-docs.png",
+        name: "Keep A Note",
+        description: "A note taking app made using ReactJS for frontend, Node with ExpressJS for backend and MongoDB as database along with Google Login.",
+        image: "https://raw.githubusercontent.com/developer-diganta/imgs/main/Keep%20A%20Note.JPG",
         liveLink: "https://dynamic-snickerdoodle-665f0f.netlify.app/",
-        githubLink: "https://github.com/keploy/keploy"
+        githubLink: "https://github.com/developer-diganta/keep-a-note"
     }
 ];
 
