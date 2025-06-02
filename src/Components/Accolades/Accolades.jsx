@@ -59,23 +59,20 @@ export default function Accolades() {
     );
 }
 
-function StickyCard({ title, issuer, date, description, index }) {
-    const ref = useRef(null);
-    const inView = useInView(ref, { once: true, margin: "-40% 0px -40% 0px" });
 
+function StickyCard({ title, date, description, index }) {
     return (
         <motion.div
-            ref={ref}
-            className="sticky top-20 w-full bg-[#1e1e1e] border border-gray-700 rounded-xl p-6 shadow-xl mt-4
-            "
+            className="sticky top-20 w-full bg-[#1e1e1e] border border-gray-700 rounded-xl p-6 shadow-xl mt-4"
             style={{ zIndex: 10 + index }}
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
         >
             <h3 className="text-2xl font-semibold mb-1">{title}</h3>
-            <div className="text-sm text-accent mb-2">{issuer} • {date}</div>
+            <div className="text-sm text-accent mb-2">{date}</div>
             <p className="text-sm opacity-80">{description}</p>
         </motion.div>
     );
 }
+

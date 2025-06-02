@@ -7,7 +7,10 @@ export default function Navbar() {
     return (
         <div className="fixed top-0 left-0 w-full bg-background text-primary shadow-md z-50 p-4">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
-                <h1 className="text-xl font-bold">My Portfolio</h1>
+                <div className='flex items-center gap-1'>
+                <img src="https://raw.githubusercontent.com/developer-diganta/me/refs/heads/master/CHR.jpg" alt="chrysaor" className='h-12 w-12'/>
+                <h1 className="text-2xl font-extrabold">DKB</h1>
+                </div>
 
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex space-x-6">
@@ -15,7 +18,8 @@ export default function Navbar() {
                     <a href="#tech" className="hover:text-accent">Tech</a>
                     <a href="#experience" className="hover:text-accent">Experience</a>
                     <a href="#projects" className="hover:text-accent">Projects</a>
-                    <a href="#achievements" className="hover:text-accent">Achievements</a>
+                    <a href="#accolades" className="hover:text-accent">Accolades</a>
+                    <a href="#contact" className="hover:text-accent">Contact</a>
                 </nav>
 
                 {/* Hamburger Button (mobile only) */}
