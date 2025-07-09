@@ -13,7 +13,7 @@ export default function Footer() {
                 {/* Social Icons */}
                 <div className="flex justify-center gap-6 text-gray-400 text-lg">
                     <a
-                        href="https://www.linkedin.com/in/your-linkedin"
+                        href="https://in.linkedin.com/in/diganta-kr-banik-1659121a7"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-accent transition"
@@ -22,7 +22,7 @@ export default function Footer() {
                         <Linkedin size={24} />
                     </a>
                     <a
-                        href="https://twitter.com/your-twitter"
+                        href="https://twitter.com/banik_diganta"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-accent transition"
@@ -31,7 +31,7 @@ export default function Footer() {
                         <Twitter size={24} />
                     </a>
                     <a
-                        href="https://github.com/your-github"
+                        href="https://github.com/developer-diganta"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-accent transition"
@@ -40,7 +40,7 @@ export default function Footer() {
                         <Github size={24} />
                     </a>
                     <a
-                        href="https://devpost.com/your-devpost"
+                        href="https://devpost.com/digantabanik2000"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-accent transition"
@@ -49,14 +49,14 @@ export default function Footer() {
                         <Globe size={24} />
                     </a>
                     <a
-                        href="mailto:your.email@example.com"
+                        href="mailto:digantabanik2000@gmail.com"
                         className="hover:text-accent transition"
                         aria-label="Email"
                     >
                         <Mail size={24} />
                     </a>
                     <a
-                        href="https://hashnode.com/@your-hashnode"
+                        href="https://chrysaor.hashnode.dev/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-accent transition"

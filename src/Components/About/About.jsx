@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
     return (
-        <div className="py-16 px-4 bg-background">
+        <div className="py-16 px-4 bg-background" id="about">
             <div className="text-5xl text-center font-bold text-white mb-4">About Me</div>
             <div className="flex justify-center mb-12">
                 <div className="h-1 w-24 bg-accent rounded-full shadow-md" />
